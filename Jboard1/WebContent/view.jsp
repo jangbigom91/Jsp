@@ -109,6 +109,7 @@
             <!-- 댓글리스트 -->
             <section class="commentList">
                 <h3>댓글목록</h3>
+                <% if(article.getComment() > 0) { %>
                 <article class="comment">
                     <span>
                         <span>길동이</span>
@@ -120,13 +121,17 @@
                         <a href="#">수정</a>
                     </div>
                 </article>
+                 <% } else { %>
                 <p class="empty">등록된 댓글이 없습니다.</p>
+                <% } %>
             </section>
 
             <!-- 댓글입력폼 -->
             <section class="commentForm">
                 <h3>댓글쓰기</h3>
-                <form action="#">
+                <form action="/Jboard1/proc/comment.jsp" method="post">
+                	<input type="hidden", name="parent" value="<%= article.getSeq() %>" />
+                	<input type="hidden", name="uid" value="<%= mb.getUid() %>" />
                     <textarea name="comment"></textarea>
                     <div>
                         <a href="#" class="btnCancel">취소</a>
