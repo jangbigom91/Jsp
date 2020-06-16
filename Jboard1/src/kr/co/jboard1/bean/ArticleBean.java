@@ -16,6 +16,14 @@ public class ArticleBean {
 	
 	// 추가필드
 	private String nick;
+	private FileBean fileBean;
+	
+	public FileBean getFileBean() {
+		return fileBean;
+	}
+	public void setFileBean(FileBean fileBean) {
+		this.fileBean = fileBean;
+	}
 	
 	public String getNick() {
 		return nick;
@@ -23,7 +31,6 @@ public class ArticleBean {
 	public void setNick(String nick) {
 		this.nick = nick;
 	}
-	
 	
 	public int getSeq() {
 		return seq;
