@@ -3,13 +3,23 @@ package kr.co.jboard1.config;
 public class SQL {
 	
 	// 회원관련
-	/*public final static String SELECT_LOGIN = "SELECT * FROM `JBOARD_MEMBER` "
+	public final static String SELECT_CHECK_UID = "SELECT COUNT(`uid`) FROM `JBOARD_MEMBER` WHERE `uid`=?";
+	public final static String SELECT_CHECK_NICK = "SELECT COUNT(`nick`) FROM `JBOARD_MEMBER` WHERE `nick`=?";
+	public final static String SELECT_CHECK_EMAIL = "SELECT COUNT(`email`) FROM `JBOARD_MEMBER` WHERE `email`=?";
+	public final static String SELECT_CHECK_HP = "SELECT COUNT(`hp`) FROM `JBOARD_MEMBER` WHERE `hp`=?";
+	
+	
+	
+	
+	
+	/*
+	public final static String SELECT_LOGIN = "SELECT * FROM `JBOARD_MEMBER` "
 											+ "WHERE `uid`=? AND `pass`=?";
 	
 	public final static String INSERT_REGISTER = "INSERT INTO `JBOARD_MEMBER` SET "
 												+ "`uid`=?, "
-												+ "`pass1`=? ,"
-												+ "`pass2`=? ,"
+												+ "`pass1`=?, "
+												+ "`pass2`=?, "
 												+ "`name`=?, "
 												+ "`nick`=?, "
 												+ "`email`=?, "
