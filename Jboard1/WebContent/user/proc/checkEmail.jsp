@@ -28,7 +28,7 @@
 	
 	// Json 생성
 	JsonObject json = new JsonObject();
-	json.addProperty("result", result);   // 아이디가 있으면 result:1, 없으면 result:0
+	json.addProperty("result", result);   // 이메일이 있으면 result:1, 없으면 result:0
 	
 	// Json 출력
 	out.print(json);
