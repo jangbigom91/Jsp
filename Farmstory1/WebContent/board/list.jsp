@@ -134,9 +134,7 @@
     </div>
 
     <!-- 글쓰기 버튼 -->
-    <% if(mb.getGrade() > 2) { %>
-    	<a href="./write.jsp?group=<%= group %>&cate=<%= cate %>" class="btnWrite">글쓰기</a>
-    <% } %>
+   	<a href="./write.jsp?group=<%= group %>&cate=<%= cate %>" class="btnWrite">글쓰기</a>
 </section>
 
 <!-- 컨텐츠 내용 끝 -->

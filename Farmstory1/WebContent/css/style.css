@@ -717,7 +717,32 @@ footer > p > span {
     text-align: right;
 }
 
+/* 컨텐츠 내용 */
+.content > div {
+    width: 760px;
+    height: 164px;
+    box-sizing: border-box;
+    background-image: url('../img/sub_page1_article_bg.jpg');
+}
 
+.content > p {
+    font-size: 11px;
+    margin-top: 26px;
+}
+
+.content > nav {
+    float: right;
+    width: 271px;
+    height: 234px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-image: url('../img/sub_page1_article_family.png');
+}
+
+.content > p > span {
+    font-weight: bold;
+    color: rgb(145, 186, 21);
+}
 
 
 
