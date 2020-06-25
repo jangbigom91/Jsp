@@ -109,7 +109,7 @@
 	
 	$(document).ready(function() {
 		$('#summernote').summernote({
-			readonly: false,
+			readonly: true,
 			airMode: true,
 			focus: false
 		});
