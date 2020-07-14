@@ -3,9 +3,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>main</title>
 </head>
 <body>
+main.jsp에서 생성한 내용.
 
+<jsp:include page="p157_sub.jsp" flush="" />
+
+include 이후의 내용.
 </body>
 </html>

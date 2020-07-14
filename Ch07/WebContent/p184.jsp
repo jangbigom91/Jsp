@@ -1,11 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<%
+	String code = request.getParameter("code");
+	String viewPageURI = null;
+	
+	if(code.equals("A")) {
+		viewPageURI = "/p185.jsp";
+	}else if(code.equals("B")){
+		viewPageURI = "/p185.jsp";
+	}else if(code.equals("C")){
+		viewPageURI = "/p185.jsp";
+	}
+%>
+<jsp:forward page="<%= viewPageURI %>" />

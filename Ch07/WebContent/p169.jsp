@@ -3,9 +3,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>include 디렉티브</title>
 </head>
 <body>
+<%
+	int number= 10;
+%>
 
+<%@ include file="/p170.jsp" %>
+
+공통변수 DATAFOLDER = "<%= dataFolder %>"
 </body>
 </html>
