@@ -10,8 +10,8 @@
 	int number= 10;
 %>
 
-<%@ include file="/p170.jsp" %>
+<!-- <%@ include file="/p170.jsp" %> -->
 
-공통변수 DATAFOLDER = "<%= dataFolder %>"
+<!-- 공통변수 DATAFOLDER = "<%=  %>" -->
 </body>
 </html>
