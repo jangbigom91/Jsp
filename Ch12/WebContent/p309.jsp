@@ -17,6 +17,5 @@
 		<li><c:url value="/p300.jsp"></c:url>
 		<li><c:url value="./p300.jsp"></c:url>
 	</ul>
-
 </body>
 </html>

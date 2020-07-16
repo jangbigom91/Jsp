@@ -14,7 +14,7 @@
 			</c:when>
 			
 			<c:when test="${param.name > 20}">
-				<li> 당신은 20세 이상입니다.
+				<li> 당신은 20세 이상 입니다.
 			</c:when>
 			
 			<c:otherwise>

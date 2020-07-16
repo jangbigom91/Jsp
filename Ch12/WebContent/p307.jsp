@@ -11,6 +11,5 @@
 	<c:forTokens var="token" items="빨강색, 주황색, 노란색, 초록색, 파랑색, 남색, 보라색" delims=",.">
 		${token}
 	</c:forTokens>
-
 </body>
 </html>
