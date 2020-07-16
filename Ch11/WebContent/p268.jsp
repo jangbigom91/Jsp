@@ -17,6 +17,5 @@
 	<br />
 	
 	정보 : ${t.info}
-
 </body>
 </html>

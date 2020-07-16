@@ -10,6 +10,7 @@
 <title>EL 함수 호출</title>
 </head>
 <body>
+	
 	가격은 <b>${FortmatUtil.number(price, '#,##0')}</b>원 입니다.
 </body>
 </html>
