@@ -11,7 +11,7 @@
 	int sec = cal.get(Calendar.SECOND);
 %>
 <p>
-	오늘 날짜 : <%= year %>년 <%= month %>월 <%= date %>일<br />
+	오늘 날짜 : <%= year %>년 <%= month +1 %>월 <%= date %>일<br />
 	현재 시간 : <%= hour %>시 <%= min %>분 <%= sec %>초<br />
 </p>
 
