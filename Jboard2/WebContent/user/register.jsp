@@ -18,6 +18,8 @@
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
 		// 유효성(validation) 검증
+		$(function(){
+		
 		$('.register > form').submit(function(){
 			
 			// 아이디 중복 여부 확인
@@ -59,7 +61,7 @@
 			// 최종 데이터 확인 완료
 			return true;
 		});
-		
+	});
 	</script>
 </head>
 <body>
