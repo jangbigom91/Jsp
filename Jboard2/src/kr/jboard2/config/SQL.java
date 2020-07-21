@@ -22,24 +22,8 @@ public class SQL {
 												+ "`regip`=?, "
 												+ "`rdate`=NOW()";
 	
-	/*
-	public final static String SELECT_LOGIN = "SELECT * FROM `JBOARD_MEMBER` "
-											+ "WHERE `uid`=? AND `pass`=?";
-	
-	public final static String INSERT_REGISTER = "INSERT INTO `JBOARD_MEMBER` SET "
-												+ "`uid`=?, "
-												+ "`pass1`=?, "
-												+ "`pass2`=?, "
-												+ "`name`=?, "
-												+ "`nick`=?, "
-												+ "`email`=?, "
-												+ "`hp`=?, "
-												+ "`zip`=?, "
-												+ "`addr1`=?, "
-												+ "`addr2`=?, "
-												+ "`regip`=?, "
-												+ "`rdate`=NOW()";
-	*/
+	public final static String SELECT_MEMBER = "SELECT * FROM `JBOARD_MEMBER`"
+											 + "WHERE `uid`=? AND `pass`=PASSWORD(?)";
 	
 	// 게시물 관련
 	public final static String SELECT_TOTAL_COUNT = "SELECT COUNT(`seq`) FROM `JBOARD_ARTICLE` WHERE `parent`=0";

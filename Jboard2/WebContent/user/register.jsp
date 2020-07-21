@@ -14,53 +14,53 @@
 	<script src="/Jboard2/js/checkNick.js"></script>
 	<script src="/Jboard2/js/checkEmail.js"></script>
 	<script src="/Jboard2/js/checkHp.js"></script>
-	<script src="/Jboard2/js/checkZipcode.js"></script>
+	<script src="/Jboard2/js/zipcode.js"></script>
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
 		// 유효성(validation) 검증
 		$(function(){
 		
-		$('.register > form').submit(function(){
-			
-			// 아이디 중복 여부 확인
-			if(!isUidOk) {
-				alert('아이디를 다시 확인 하십시오.');
-				return false;	
-			}
-			
-			// 비밀번호 일치 여부 확인
-			if(!isPassOk) {
-				alert('비밀번호를 다시 확인 하십시오.');
-				return false;
-			}
-			
-			// 이름 한글 여부 확인
-			if(!isNameOk) {
-				alert('이름을 다시 확인 하십시오.');
-				return false;
-			}
-			
-			// 별명 중복 여부 확인
-			if(!isNickOk) {
-				alert('별명을 다시 확인 하십시오.');
-				return false;
-			}
-			
-			// 이메일 중복 여부 확인
-			if(!isEmailOk) {
-				alert('이메일을 다시 확인 하십시오.');
-				return false;
-			}
-			
-			// 휴대폰 중복 여부 확인
-			if(!isHpOk) {
-				alert('휴대폰을 다시 확인 하십시오.');
-				return false;
-			}
-			
-			// 최종 데이터 확인 완료
-			return true;
-		});
+			$('.register > form').submit(function(){
+				
+				// 아이디 중복 여부 확인
+				if(!isUidOk) {
+					alert('아이디를 다시 확인 하십시오.');
+					return false;	
+				}
+				
+				// 비밀번호 일치 여부 확인
+				if(!isPassOk) {
+					alert('비밀번호를 다시 확인 하십시오.');
+					return false;
+				}
+				
+				// 이름 한글 여부 확인
+				if(!isNameOk) {
+					alert('이름을 다시 확인 하십시오.');
+					return false;
+				}
+				
+				// 별명 중복 여부 확인
+				if(!isNickOk) {
+					alert('별명을 다시 확인 하십시오.');
+					return false;
+				}
+				
+				// 이메일 중복 여부 확인
+				if(!isEmailOk) {
+					alert('이메일을 다시 확인 하십시오.');
+					return false;
+				}
+				
+				// 휴대폰 중복 여부 확인
+				if(!isHpOk) {
+					alert('휴대폰을 다시 확인 하십시오.');
+					return false;
+				}
+				
+				// 최종 데이터 확인 완료
+				return true;
+			});
 	});
 	</script>
 </head>

@@ -9,8 +9,9 @@ $(function(){
 		var name = $(this).val();
 		
 		if(regName.test(name) == false) {
-			alert('이름은 한글로 2자이상 최대 5자까지 입력하셔야 합니다.');
+			
 			return false;
+			
 		}else {
 			isNameOk = true;
 		}
