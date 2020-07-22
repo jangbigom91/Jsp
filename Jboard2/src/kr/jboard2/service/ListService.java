@@ -144,8 +144,4 @@ public class ListService implements CommonService{
 		return currentPage;
 	}
 	
-	
-	
-	
-	
 }
