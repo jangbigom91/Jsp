@@ -43,35 +43,34 @@
             
             <script>
             	
-            	$(function(){
-            		
-            		var btnDel = $('.commentList > article > div > a:first-child');
-            		
-            		btnDel.click(function(e){
-            			e.preventDefalut();
-						            			
-            			var tag = $(this);
-            			var href = tag.attr('href');
-            			
-            			$.ajax({
-            				url: href,
-            				type: 'get',
-            				dataType: 'json',
-            				success: function(data){
-            					
-            					if(data.result == 1) {
-            						alert("댓글 삭제 완료");
-            						
-            						// 댓글 삭제 후 현재 뷰에 출력되어 있는 댓글 삭제
-            						tag.parent().parent().remove();
-            					}
-            				}
-            				
-            			});
-            			
-            		}); // btnDel click 이벤트 끝
-            		
-            	});
+            $(function(){
+        		
+        		var btnDel = $('.commentList > article > div > a:first-child');
+        		
+        		btnDel.click(function(e){
+        			e.preventDefault();
+        			
+        			var tag = $(this);
+        			var href = tag.attr('href');
+        			
+        			$.ajax({
+        				url: href,
+        				type: 'get',
+        				dataType: 'json',
+        				success: function(data){
+        					
+        					if(data.result == 1){
+        						alert("댓글 삭제 완료");
+        						
+        						// 댓글 삭제 후 현재 뷰에 출력되어 있는 댓글 삭제
+        						tag.parent().parent().remove();
+        					}            					
+        				}            				
+        			});            			
+        			
+        		}); // btnDel click 이벤트 끝 
+        		
+        	});
             
             </script>
             
