@@ -23,7 +23,7 @@
                 <li><a href="#">팜스토리소개</a></li>
                 <li><a href="#"><img src="../img/head_menu_badge.png" alt="30%"/>장보기</a></li>
                 <li><a href="#">농작물이야기</a></li>
-                <li><a href="#">이벤트</a></li>
+                <li><a href="/Farmstory2/event/event.do">이벤트</a></li>
                 <li><a href="#">커뮤니티</a></li>
             </ul>
 
@@ -37,7 +37,7 @@
                 <aside>
                     <img src="../img/sub_aside_cate4_tit.png" alt="이벤트"/>
                     <ul>
-                        <li class="on"><a href="#">이벤트</a></li>
+                        <li class="on"><a href="/Farmstory2/event/event.do">이벤트</a></li>
                     </ul>
                 </aside>
                 <article>
