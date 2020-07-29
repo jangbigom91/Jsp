@@ -5,6 +5,7 @@
     <h3>글쓰기</h3>
     <article>
         <form action="/Farmstory2/board/write.do" method="post">
+        	<input type="hidden" name="group" value="${requestScope.group}" />
         	<input type="hidden" name="cate" value="${requestScope.cate}" />
         	<input type="hidden" name="uid" value="${sessionScope.member.uid}" />
             <table>
@@ -24,7 +25,7 @@
                 </tr>
             </table>
             <div>
-                <a href="/Farmstory2/board/list.do" class="btnCancel">취소</a>
+                <a href="/Farmstory2/board/list.do?group=${group}&cate=${cate}" class="btnCancel">취소</a>
                 <input type="submit"  class="btnWrite" value="작성완료">
             </div>
         </form>
