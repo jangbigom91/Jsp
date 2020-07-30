@@ -3,25 +3,24 @@ package kr.farmstory2.service.board;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.JsonObject;
-
 import kr.farmstory2.controller.CommonService;
 import kr.farmstory2.dao.BoardDAO;
 
-public class DeleteCommentService implements CommonService {
+public class DeleteArticleService implements CommonService {
 
 	@Override
 	public String requestProc(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		
-		String seq = req.getParameter("seq");
-		String parent = req.getParameter("parent");
-
+		String seq   = req.getParameter("seq");
+		String group = req.getParameter("group");
+		String cate  = req.getParameter("cate");
+		
 		BoardDAO dao = BoardDAO.getInstance();
-		int result = dao.deleteComment(seq);
+		dao.deleteArticle(seq);
 		
-		JsonObject json = new JsonObject();
-		json.addProperty("result", result);
+		req.setAttribute("seq", seq);
 		
-		return "json:"+json.toString();
+		return "redirect:/Farmstory2/board/list.do?group="+group+"&cate="+cate;
 	}
+
 }

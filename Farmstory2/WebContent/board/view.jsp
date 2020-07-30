@@ -29,9 +29,9 @@
             </tr>
         </table>
         <div>
-            <a href="#" class="btnDelete">삭제</a>
+            <a href="/Farmstory2/board/deleteArticle.do?group=${group}&cate=${cate}&seq=${vo.seq}" class="btnDelete">삭제</a>
             <a href="#" class="btnModify">수정</a>
-            <a href="#" class="btnList">목록</a>
+            <a href="/Farmstory2/board/list.do?group=${group}&cate=${cate}" class="btnList">목록</a>
         </div>
         
         <script>
@@ -43,7 +43,7 @@
         		var btnModify 	= $('.commentList .modify');
         		var btnComplete = $('.commentList .complete');
         		var btnCancel 	= $('.commentList .cancel');
-        		var btndel 		= $('.commentList .del');
+        		var btnDel 		= $('.commentList .del');
         		
         		// 취소 클릭
         		btnCancel.click(function(e){
@@ -84,7 +84,63 @@
         			parent.children().eq(3).addClass('off');
         		});
         		
-        	});
+        		// 수정완료 클릭
+        		btnComplete.click(function(e){
+        			e.preventDefault();
+        			
+        			var parent = $(this).parent();
+        			var content = $(this).parent().prev().val();
+        			var seq 	= $(this).parent().next().val();
+        			
+        			var jsonData = {
+        				'content': content,
+        				'seq': seq
+        			};
+        			
+        			$.post('/Farmstory2/board/commentModify.do', jsonData, function(result){
+        				
+        				var data = JSON.parse(result);
+        				
+        				if(data.result == 1) {
+							alert("수정완료");	
+							
+							// 삭제 노출, 수정완료 숨김, 취소 메뉴 숨김
+		        			parent.children().eq(0).removeClass('off');
+		        			parent.children().eq(1).addClass('off');
+		        			parent.children().eq(2).addClass('off');
+		        			parent.children().eq(3).removeClass('off');
+		        			parent.prev().attr('readonly', true);
+							
+        				}
+        				
+        			});
+        			
+        		}); // 수정완료 end
+           		
+        		// 댓글삭제
+           		btnDel.click(function(e){
+           			e.preventDefault();
+           			
+           			var tag = $(this);
+           			var href = tag.attr('href');
+           			
+           			$.ajax({
+           				url: href,
+           				type: 'get',
+           				dataType: 'json',
+           				success: function(data){
+           					
+           					if(data.result == 1){
+           						
+           						// 댓글 삭제 후 현재 뷰에 출력되어 있는 댓글 삭제
+           						tag.parent().parent().remove();
+           					}            					
+           				}            				
+           			});            			
+           			
+           		}); // btnDel click 이벤트 끝 
+             		
+           	});
         </script>
 
         <!-- 댓글리스트 -->
@@ -99,11 +155,12 @@
 	                </span>
 	                <textarea name="comment" readonly>${comment.content}</textarea>
 	                <div>
-	                    <a href="#" class="del">삭제</a>
+	                    <a href="/Farmstory2/board/deleteComment.do?seq=${comment.seq}&parent=${comment.parent}" class="del">삭제</a>
 	                    <a href="#" class="cancel off">취소</a>
 	                    <a href="#" class="complete off">수정완료</a>
 	                    <a href="#" class="modify">수정</a>
 	                </div>
+	                <input type="hidden" name="seq" value="${comment.seq}"/>
 	            </article>
             </c:forEach>
             
