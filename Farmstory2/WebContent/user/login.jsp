@@ -18,7 +18,7 @@
             <div class="info">
                 <h3>회원로그인 안내</h3>
                 <p>
-                    아직 회원이 아니시면 회원으로 가입하세요.
+                                        아직 회원이 아니시면 회원으로 가입하세요.
                 </p>
                 <a href="/Farmstory2/user/terms.do">회원가입</a>
             </div>
